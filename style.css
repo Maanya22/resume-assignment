@@ -1,14 +1,336 @@
 
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: lightblue;
+    font-family: 'Poppins', sans-serif;
+    background-color: #faf9f6;
+    color: #263449;
+    line-height: 1.7;
 }
 
-h1 {
-    color: darkblue;
-    font-size: 40px;
+/* Navigation Bar */
+
+header {
+    background-color: #faf9f6;
+    padding: 18px 8%;
+    border-bottom: 1px solid #e8e5df;
 }
 
-p {
-    color: black;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: #253c5a;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #263449;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #9b7653;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 520px;
+    padding: 90px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.greeting,
+.section-label {
+    color: #a17c56;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 54px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #a17c56;
+}
+
+.hero h2 {
     font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 18px;
+    color: #52647a;
+}
+
+.hero-content > p:not(.greeting) {
+    color: #687383;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #253c5a;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #a17c56;
+}
+
+.hero-side {
+    width: 270px;
+    height: 270px;
+    background-color: #e9e5dc;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.initials {
+    font-family: 'Playfair Display', serif;
+    font-size: 85px;
+    color: #253c5a;
+}
+
+.hero-side p {
+    color: #8b7157;
+    font-size: 12px;
+}
+
+/* Common Sections */
+
+.section {
+    padding: 75px 10%;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #253c5a;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    max-width: 850px;
+    color: #687383;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+/* Education */
+
+.education-section {
+    background-color: #f0eee8;
+}
+
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.education-card {
+    background-color: #faf9f6;
+    padding: 25px;
+    flex: 1 1 220px;
+    border-left: 3px solid #a17c56;
+}
+
+.education-card h3 {
+    color: #253c5a;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.education-card p {
+    color: #7c8490;
+    font-size: 13px;
+}
+
+.education-card h4 {
+    color: #a17c56;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+/* Skills */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-card {
+    padding: 15px 25px;
+    border: 1px solid #d8d4cb;
+    background-color: white;
+    color: #253c5a;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.skill-card:hover {
+    background-color: #253c5a;
+    color: white;
+}
+
+/* Achievements */
+
+.achievements-section {
+    background-color: #f0eee8;
+}
+
+.achievement-list p {
+    margin-bottom: 15px;
+    color: #52647a;
+}
+
+/* Interests and Languages */
+
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.two-column > div {
+    flex: 1;
+}
+
+.interest-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.interest-list span {
+    background-color: #e9e5dc;
+    padding: 9px 17px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #253c5a;
+}
+
+/* Contact */
+
+.contact-section {
+    background-color: #253c5a;
+    color: white;
+    text-align: center;
+}
+
+.contact-section .section-title {
+    color: white;
+}
+
+.contact-section .section-label {
+    color: #d4b28b;
+}
+
+.contact-detail {
+    margin-top: 20px;
+}
+
+.contact-detail a {
+    color: #e5c79f;
+    text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+    background-color: #1c2e45;
+    color: #d6dce4;
+    text-align: center;
+    padding: 22px;
+    font-size: 12px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 65px 7%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-side {
+        width: 210px;
+        height: 210px;
+    }
+
+    .initials {
+        font-size: 65px;
+    }
+
+    .section {
+        padding: 55px 7%;
+    }
+
+    .two-column {
+        flex-direction: column;
+    }
 }
